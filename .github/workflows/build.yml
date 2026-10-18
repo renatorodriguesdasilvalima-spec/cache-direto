@@ -16,6 +16,12 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Set up Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
     - name: Install system dependencies
       run: |
         sudo dpkg --add-architecture i386
@@ -24,16 +30,13 @@ jobs:
             git \
             zip \
             unzip \
-            autoconf \
-            libtool \
-            pkg-config \
+            build-essential \
+            libffi-dev \
+            libssl-dev \
             zlib1g-dev \
             libncurses5:i386 \
             libstdc++6:i386 \
-            libz1:i386 \
-            openjdk-17-jdk \
-            python3-pip \
-            python3-setuptools
+            libz1:i386
 
     - name: Install Buildozer and Cython
       run: |
@@ -41,6 +44,8 @@ jobs:
         pip3 install --user cython==0.29.36 buildozer
 
     - name: Build with Buildozer
+      env:
+        HOME: ${{ github.workspace }}
       run: |
         export PATH=$PATH:~/.local/bin
         buildozer -v android release
