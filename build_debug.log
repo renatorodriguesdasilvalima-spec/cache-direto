@@ -1,0 +1,95 @@
+[0m[1;34m# Ensure build layout[0m
+[0m[1;34m# Check configuration tokens[0m
+[0m[1;34m# Preparing build[0m
+[0m[1;34m# Check requirements for android[0m
+[0m[1;30m# Search for Git (git)[0m
+[0m[1;30m#  -> found at /usr/bin/git[0m
+[0m[1;30m# Search for Cython (cython)[0m
+[0m[1;30m#  -> found at /home/guest/.local/bin/cython[0m
+[0m[1;30m# Search for Java compiler (javac)[0m
+[0m[1;30m#  -> found at /usr/bin/javac[0m
+[0m[1;30m# Search for Java keytool (keytool)[0m
+[0m[1;30m#  -> found at /usr/bin/keytool[0m
+[0m[1;34m# Install platform[0m
+[0m[1;30m# Run 'git config --get remote.origin.url' ...[0m
+[0m[1;30m# Cwd /home/guest/Documentos/cache_direto/.buildozer/android/platform/python-for-android[0m
+https://github.com/kivy/python-for-android.git
+[0m[1;30m# Run 'git branch -vv' ...[0m
+[0m[1;30m# Cwd /home/guest/Documentos/cache_direto/.buildozer/android/platform/python-for-android[0m
+* master 58d21141 [origin/master] Merge pull request #3321 from kivy/release-2026.05.09
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try apt install
+    python3-xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a non-Debian-packaged Python package,
+    create a virtual environment using python3 -m venv path/to/venv.
+    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make
+    sure you have python3-full installed.
+    
+    If you wish to install a non-Debian packaged Python application,
+    it may be easiest to use pipx install xyz, which will manage a
+    virtual environment for you. Make sure you have pipx installed.
+    
+    See /usr/share/doc/python3.11/README.venv for more information.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+[0m[1;30m# Run '/usr/bin/python3 -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...[0m
+[0m[1;30m# Cwd None[0m
+[0m[1;31m# Command failed: ('/usr/bin/python3', '-m', 'pip', 'install', '-q', '--user', 'appdirs', 'colorama>=0.3.3', 'jinja2', 'sh>=2, <3.0; sys_platform!="win32"', 'meson', 'ninja', 'build', 'toml', 'packaging', 'setuptools', 'wheel~=0.43.0')[0m
+[0m[1;31m# Error code: 1[0m
+[0m[1;31m# ENVIRONMENT:[0m
+[0m[1;31m#     SHELL = '/bin/bash'[0m
+[0m[1;31m#     SESSION_MANAGER = 'local/localhost.localdomain:@/tmp/.ICE-unix/2361,unix/localhost.localdomain:/tmp/.ICE-unix/2361'[0m
+[0m[1;31m#     QT_ACCESSIBILITY = '1'[0m
+[0m[1;31m#     COLORTERM = 'truecolor'[0m
+[0m[1;31m#     XDG_SESSION_PATH = '/org/freedesktop/DisplayManager/Session0'[0m
+[0m[1;31m#     GNOME_DESKTOP_SESSION_ID = 'this-is-deprecated'[0m
+[0m[1;31m#     GNOME_KEYRING_CONTROL = '/run/user/1000/keyring'[0m
+[0m[1;31m#     LANGUAGE = 'pt_BR:pt'[0m
+[0m[1;31m#     SSH_AUTH_SOCK = '/run/user/1000/keyring/ssh'[0m
+[0m[1;31m#     CINNAMON_VERSION = '5.6.8'[0m
+[0m[1;31m#     DESKTOP_SESSION = 'lightdm-xsession'[0m
+[0m[1;31m#     SSH_AGENT_PID = '2567'[0m
+[0m[1;31m#     GTK_MODULES = 'gail:atk-bridge'[0m
+[0m[1;31m#     XDG_SEAT = 'seat0'[0m
+[0m[1;31m#     PWD = '/home/guest/Documentos/cache_direto'[0m
+[0m[1;31m#     LOGNAME = 'guest'[0m
+[0m[1;31m#     XDG_SESSION_DESKTOP = 'lightdm-xsession'[0m
+[0m[1;31m#     XDG_SESSION_TYPE = 'x11'[0m
+[0m[1;31m#     GPG_AGENT_INFO = '/run/user/1000/gnupg/S.gpg-agent:0:1'[0m
+[0m[1;31m#     XAUTHORITY = '/home/guest/.Xauthority'[0m
+[0m[1;31m#     XDG_GREETER_DATA_DIR = '/var/lib/lightdm/data/guest'[0m
+[0m[1;31m#     HOME = '/home/guest'[0m
+[0m[1;31m#     LANG = 'pt_BR.UTF-8'[0m
+[0m[1;31m#     LS_COLORS = 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:'[0m
+[0m[1;31m#     XDG_CURRENT_DESKTOP = 'X-Cinnamon'[0m
+[0m[1;31m#     VTE_VERSION = '7006'[0m
+[0m[1;31m#     XDG_SEAT_PATH = '/org/freedesktop/DisplayManager/Seat0'[0m
+[0m[1;31m#     GNOME_TERMINAL_SCREEN = '/org/gnome/Terminal/screen/8b7931f5_e974_41e3_b226_85e25344a688'[0m
+[0m[1;31m#     XDG_SESSION_CLASS = 'user'[0m
+[0m[1;31m#     TERM = 'xterm-256color'[0m
+[0m[1;31m#     GTK_OVERLAY_SCROLLING = '0'[0m
+[0m[1;31m#     USER = 'guest'[0m
+[0m[1;31m#     GNOME_TERMINAL_SERVICE = ':1.465'[0m
+[0m[1;31m#     DISPLAY = ':0'[0m
+[0m[1;31m#     SHLVL = '1'[0m
+[0m[1;31m#     XDG_VTNR = '7'[0m
+[0m[1;31m#     XDG_SESSION_ID = '1'[0m
+[0m[1;31m#     XDG_RUNTIME_DIR = '/run/user/1000'[0m
+[0m[1;31m#     GTK3_MODULES = 'xapp-gtk3-module'[0m
+[0m[1;31m#     XDG_DATA_DIRS = '/usr/share/gnome:/home/guest/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share'[0m
+[0m[1;31m#     PATH = '/home/guest/.buildozer/android/platform/apache-ant-1.9.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/guest/flutter/bin:/home/guest/flutter/bin:/home/guest/.local/bin'[0m
+[0m[1;31m#     GDMSESSION = 'lightdm-xsession'[0m
+[0m[1;31m#     DBUS_SESSION_BUS_ADDRESS = 'unix:path=/run/user/1000/bus'[0m
+[0m[1;31m#     OLDPWD = '/home/guest/Documentos/cache_direto'[0m
+[0m[1;31m#     _ = '/home/guest/.local/bin/buildozer'[0m
+[0m[1;31m# [0m
+[0m[1;31m# Buildozer failed to execute the last command[0m
+[0m[1;31m# The error might be hidden in the log above this error[0m
+[0m[1;31m# Please read the full log, and search for it before[0m
+[0m[1;31m# raising an issue with buildozer itself.[0m
+[0m[1;31m# In case of a bug report, please add a full log with log_level = 2[0m
