@@ -55,12 +55,9 @@ jobs:
         pip install --upgrade pip
         pip install cython==0.29.36 buildozer
 
-    - name: Accept Android SDK Licenses & Build
+    - name: Build App with Buildozer
       run: |
-        # Cria a pasta do android sdk se não existir e aceita licenças prévias se necessário
-        mkdir -p ~/.buildozer/android/platform/android-sdk
-        export PATH=$PATH:/usr/lib/android-sdk/tools/bin
-        buildozer -v android release
+        yes | buildozer -v android release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
