@@ -55,8 +55,9 @@ jobs:
         pip install --upgrade pip
         pip install cython==0.29.36 buildozer
 
-    - name: Build App with Buildozer
+    - name: Clean Build Environment & Build App
       run: |
+        buildozer clean
         yes | buildozer -v android release
 
     - name: Upload Artifact
