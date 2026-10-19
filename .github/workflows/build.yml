@@ -11,60 +11,17 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
+    - name: Build with Buildozer
+      uses: ArtemSBulgakov/buildozer-action@v1
+      id: buildozer
       with:
-        python-version: '3.10'
+        command: buildozer -v android release
+        github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Set up Java
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-
-    - name: Install Dependencies
-      run: |
-        sudo dpkg --add-architecture i386
-        sudo apt-get update
-        sudo apt-get install -y \
-            build-essential \
-            git \
-            ffmpeg \
-            libsdl2-dev \
-            libsdl2-image-dev \
-            libsdl2-mixer-dev \
-            libsdl2-ttf-dev \
-            libswscale-dev \
-            libavformat-dev \
-            libavcodec-dev \
-            libunwind-dev \
-            zlib1g-dev \
-            libssl-dev \
-            libffi-dev \
-            libncurses5:i386 \
-            libstdc++6:i386 \
-            libz1:i386 \
-            autoconf \
-            libtool \
-            pkg-config \
-            ant \
-            maven \
-            zip \
-            unzip
-
-    - name: Install Buildozer and Cython
-      run: |
-        pip3 install --upgrade pip
-        pip3 install cython==0.29.36 buildozer
-
-    - name: Run Buildozer
-      run: |
-        buildozer -v android release
-
-    - name: Upload Artifact
+    - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: release-aab-apk
+        name: release-aab
         path: |
           bin/*.aab
           bin/*.apk
