@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python
+    - name: Set up Python 3.10
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
@@ -50,9 +50,10 @@ jobs:
             zip \
             unzip
 
-    - name: Install Buildozer and Cython
+    - name: Install Buildozer, Cython and Compatible Pip
       run: |
-        pip install --upgrade pip
+        python -m pip install --upgrade pip
+        pip install "pip<24.0"
         pip install cython==0.29.36 buildozer
 
     - name: Clean Build Environment & Build App
@@ -67,4 +68,3 @@ jobs:
         path: |
           bin/*.aab
           bin/*.apk
-          p4a.branch = master
