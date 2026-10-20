@@ -67,3 +67,4 @@ jobs:
         path: |
           bin/*.aab
           bin/*.apk
+p4a.branch = master
