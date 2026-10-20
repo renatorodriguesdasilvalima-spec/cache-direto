@@ -1,6 +1,5 @@
 - name: Clean Build Environment & Build App
       run: |
         rm -rf .buildozer
-        # Força o pip antigo globalmente para que o buildozer oherde no venv
         python -m pip install --upgrade "pip<24.0"
         yes | buildozer -v android release
