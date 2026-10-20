@@ -1,4 +1,7 @@
 - name: Clean Build Environment & Build App
-  run: |
-    rm -rf .buildozer
-    yes | buildozer -v android release
+      run: |
+        rm -rf .buildozer
+        python -m pip install --upgrade "pip<24.0"
+        # Força o buildozer a usar o python3.10 explicitamente no p4a
+        export PATH="/opt/hostedtoolcache/Python/3.10.22/x64/bin:$PATH"
+        yes | buildozer -v android release
