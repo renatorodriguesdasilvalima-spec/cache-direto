@@ -1,4 +1,4 @@
-- name: Install Buildozer and Cython
+- name: Install Buildozer e Cython
       run: |
         python -m pip install "pip<24.1"
         pip install cython==0.29.36 buildozer python-for-android
