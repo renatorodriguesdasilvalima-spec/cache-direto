@@ -1,44 +1,4 @@
-name: Criar aplicativo para Android
-
-on:
-  push:
-    branches: [ principal ]
-  pull_request:
-    branches: [ principal ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies (System)
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y \
-          build-essential \
-          git \
-          python3-pip \
-          python3-setuptools \
-          python3-dev \
-          libffi-dev \
-          libssl-dev \
-          zlib1g-dev \
-          openjdk-17-jdk \
-          autoconf \
-          libtool \
-          pkg-config \
-          zip \
-          unzip
-
-    - name: Install Buildozer and Cython
+- name: Install Buildozer and Cython
       run: |
         python -m pip install "pip<24.1"
         pip install cython==0.29.36 buildozer python-for-android
