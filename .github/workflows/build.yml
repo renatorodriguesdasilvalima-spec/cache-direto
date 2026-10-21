@@ -69,3 +69,12 @@ jobs:
         path: |
           bin/*.aab
           bin/*.apk
+
+# (int) Target Android API, should be as high as possible.
+android.api = 33
+
+# (int) Minimum API your APK / AAB will support.
+android.min_api = 21
+
+# (str) Version of android build-tools to use
+android.build_tools_version = 33.0.2
