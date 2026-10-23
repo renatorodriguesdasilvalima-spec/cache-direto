@@ -39,9 +39,14 @@ jobs:
 
       - name: Build Android APK with Buildozer
         env:
-          IGNORE_MISSING_DEPS: "1"
+          AUTOCONF: "autoconf"
+          AUTOMAKE: "automake"
+          ACLOCAL: "aclocal"
+          AUTOHEADER: "autoheader"
+          AUTORECONF: "autoreconf"
+          AUTOCONF_WERROR: "0"
         run: |
-          export PATH="/usr/local/bin:$PATH"
+          export AUTOCONF_WERROR=0
           buildozer -v android debug
 
       - name: Upload APK Artifact
