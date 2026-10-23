@@ -1,2 +1,2 @@
 - name: Build Android APK with Buildozer
-        run: export AUTOCONF_WERROR=0 && export WANT_AUTOCONF_2_5=1 && buildozer -v android debug
+        run: "export AUTOCONF_WERROR=0 && export WANT_AUTOCONF_2_5=1 && buildozer -v android debug"
