@@ -39,8 +39,9 @@ jobs:
 
       - name: Build Android APK with Buildozer
         env:
-          AUTOCONF_WERROR: "0"
+          IGNORE_MISSING_DEPS: "1"
         run: |
+          export PATH="/usr/local/bin:$PATH"
           buildozer -v android debug
 
       - name: Upload APK Artifact
