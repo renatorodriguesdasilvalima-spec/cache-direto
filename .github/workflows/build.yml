@@ -38,6 +38,8 @@ jobs:
           pip install "setuptools<=68.2.2" cython==0.29.36 buildozer python-for-android
 
       - name: Build Android APK with Buildozer
+        env:
+          AUTOCONF_WERROR: "0"
         run: |
           buildozer -v android debug
 
