@@ -1,2 +1,4 @@
 - name: Install system dependencies
-        run: sudo apt-get update && sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf automake libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev build-essential gettext autopoint libltdl-dev libstdc++6:i386 libz1:i386
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf automake libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev build-essential gettext autopoint libltdl-dev libstdc++6:i386 libz1:i386
