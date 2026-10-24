@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       AUTOCONF_WERROR: "0"
       WANT_AUTOCONF_2_5: "1"
@@ -41,7 +41,7 @@ jobs:
           pip install "setuptools<=68.2.2" cython==0.29.36 buildozer python-for-android
 
       - name: Build Android APK with Buildozer
-        run: buildozer -v --debug android debug
+        run: buildozer -v android debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
