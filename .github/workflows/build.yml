@@ -35,10 +35,10 @@ jobs:
           python3 -m pip install --upgrade Cython==3.0.8 buildozer
 
       - name: Build APK with Buildozer
-        run: buildozer -v android debug
+        run: buildozer -v android release
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cache-direto-apk
-          path: bin/*.apk
+          name: cache-direto-aab
+          path: bin/*.aab
