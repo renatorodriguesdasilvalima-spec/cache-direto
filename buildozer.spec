@@ -13,7 +13,7 @@ package.domain = org.cachedireto
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas,json
+source.exclude_dirs = venv, .buildozer, bin, __pycache__
 
 # (str) Application versioning (method 1)
 version = 0.1
