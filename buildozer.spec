@@ -18,6 +18,9 @@ source.exclude_dirs = venv, .buildozer, bin, __pycache__
 # (str) Application versioning (method 1)
 version = 0.1
 
+# (str) Format of release artifact to produce (aab or apk)
+android.release_artifact = aab
+
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,kivymd==1.1.1,pillow,requests
