@@ -43,7 +43,7 @@ android.minapi = 24
 android.ndk = 25b
 
 # (str) Android NDK integration
-android.ndk_api = 21
+android.ndk_api = 24
 
 # (bool) Use --private data directory (True) or --dir public storage (False)
 android.private_storage = True
