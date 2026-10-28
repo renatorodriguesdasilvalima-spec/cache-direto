@@ -37,7 +37,7 @@ android.permissions = INTERNET
 android.api = 33
 
 # (int) Minimum API required
-android.minapi = 21
+android.minapi = 24
 
 # (str) Android NDK version to use (usar a versão 25b para evitar o erro da r28c)
 android.ndk = 25b
